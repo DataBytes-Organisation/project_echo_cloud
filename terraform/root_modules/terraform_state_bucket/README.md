@@ -1,6 +1,8 @@
 # terraform_state_bucket
 This root module is the very first that should be ran to deploy the state bucket that will be used as the state backend for all other root modules. This enables Terraform state to be shared and consistently used among all cloud engineers working on Project Echo.
 
+It is only required to be deployed <b>ONCE</b> per GCP project.
+
 ## Resources deployed
 This root module deploys a GCP Storage bucket with public access blocked, uniform access controls with the default ACL settings, which grants editors and owners owner access on the bucket and other users of the project read only.
 
