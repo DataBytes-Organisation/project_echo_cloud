@@ -9,7 +9,7 @@ This root module deploys a GCP Storage bucket with public access blocked, unifor
 ## Deployment steps
 It is assumed that the engineer running these steps has Terraform configured locally and at least has editor permission to the GCP project that this bucket is being deployed to.
 
-## Steps summarised
+### Steps summarised
 * Change directory to this root module
 * Run terraform init to initalise terraform for the directory
 * Run a terraform plan with common and environment specific tfvars files and review the resources being deployed
