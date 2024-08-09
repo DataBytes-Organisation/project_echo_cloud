@@ -1,9 +1,15 @@
 # project_echo_cloud
 Repo containing code relating to Project Echo GCP deployments. Mostly terraform and kubernetes.
 
-## Working with this repository
+## Getting Started
 
 To begin working with this repository ensure you have at least a basic understanding of Terraform, Docker, Kubernetes and Google Cloud Platform (GCP).
+
+A copy of setting up Terraform for GCP deployments has been placed under /documentation/GettingStarted to assist with setting up Terraform on a cloud engineer's local PC.
+
+## Project initialisation
+
+To begin working collaboratively within a GCP project for Project Echo the Terraform state bucket must first be deployed. It is located in the /terraform/root_modules/terraform_state_bucket directory. See the readme file there for directions on deploying the state bucket.
 
 ### Contribution Guidelines
 
