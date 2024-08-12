@@ -27,11 +27,16 @@ jobs:
       with:
         cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
 
+    - name: 'Set up Google Cloud credentials'
+      uses: google-github-actions/auth@v1
+      with:
+        credentials_json: ${{ secrets.GCP_CREDENTIALS }}
+
     - name: 'Configure GCP Project'
       run: gcloud config set project sit-23t1-project-echo-25288b9
 
     - name: 'Configure GCP Region'
-      run: gcloud config set compute/region australia-southeast2  # Replace with your preferred region
+      run: gcloud config set compute/region australia-southeast2
 
     - name: Terraform Init
       run: terraform init
