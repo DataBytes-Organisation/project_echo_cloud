@@ -38,6 +38,7 @@ jobs:
     - name: 'Configure GCP Region'
       run: gcloud config set compute/region australia-southeast2
 
+    # No need to change directory since Terraform files are in the root directory
     - name: Terraform Init
       run: terraform init
 
