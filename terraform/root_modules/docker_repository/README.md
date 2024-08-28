@@ -1,15 +1,8 @@
-# docker_repositories
-This root module creates GCP Artifact Registry Docker repositories within an environment.
-
-[GCP Docker Push Guide](https://cloud.google.com/artifact-registry/docs/docker/store-docker-container-images)
+# docker_repository
+This root module creates GCP Artifact Registry Docker repository within environment.
 
 ## Resources deployed
-One docker repository for each value within the variable docker_respositories.
-* Editors get admin access.
-* Viewers get pull access
-
-
-[GCP Docker Repo Access Control](https://cloud.google.com/artifact-registry/docs/access-control#permissions)
+Single docker repository that contains images for all applications.
 
 ## Deployment steps
 
@@ -23,7 +16,7 @@ One docker repository for each value within the variable docker_respositories.
 Run the following commands one at a time.
 
 ```bash
-cd terraform/root_modules/docker_repositories
+cd terraform/root_modules/docker_repository
 terraform init
 terraform plan -var-file="../../vars/common.tfvars" -var-file="../../vars/dev.tfvars"
 terraform apply -var-file="../../vars/common.tfvars" -var-file="../../vars/dev.tfvars"

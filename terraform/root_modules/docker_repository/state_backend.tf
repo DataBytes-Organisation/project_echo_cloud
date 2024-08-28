@@ -5,6 +5,6 @@
 terraform {
   backend "gcs" {
     bucket = "databytes-project-echo-terraform-state"
-    prefix = "terraform/state/docker_repositories"
+    prefix = "terraform/state/docker_repository"
   }
 }

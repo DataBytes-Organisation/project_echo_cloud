@@ -21,8 +21,3 @@ variable "env" {
   type        = string
   description = "Infrastructure environment. Should be one of dev, sit or prod."
 }
-
-variable "docker_repositories" {
-  type        = list(string)
-  description = "List of strings that are names for docker repositories to create. These are usually application names"
-}
