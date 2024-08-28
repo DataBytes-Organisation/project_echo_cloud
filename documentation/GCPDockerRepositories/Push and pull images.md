@@ -16,7 +16,7 @@ To configure authentication within Docker with GCP open a command line or shell 
 gcloud auth configure-docker australia-southeast2-docker.pkg.dev
 ```
 
-This is all that is required to setup authentication.
+This is all that is required to setup authentication. Under reference links is a link to further instructions if required.
 
 ## Docker Push
 To push an image it should be first tagged with a relevant tag for the remote repository (it helps identify image versions), usually an increment to the next version number. View the image within the Repository project-echo in the GCP console to view the current image tags. After tagging the image can be pushed.
@@ -69,5 +69,7 @@ docker pull australia-southeast2-docker.pkg.dev/sit-23t1-project-echo-25288b9/pr
 
 ## Reference Links
 [GCP Storing Docker Images](https://cloud.google.com/artifact-registry/docs/docker/store-docker-container-images)
+
 [GCP Docker Repo Access Control](https://cloud.google.com/artifact-registry/docs/access-control#permissions)
+
 [GCP Push Pull](https://cloud.google.com/artifact-registry/docs/docker/pushing-and-pulling)

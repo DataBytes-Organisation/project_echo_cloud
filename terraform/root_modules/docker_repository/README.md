@@ -1,5 +1,5 @@
 # docker_repository
-This root module creates GCP Artifact Registry Docker repository within environment.
+This root module creates GCP Artifact Registry Docker repository within environment. Documentation on how to push and pull images with this repository is located within documentation/GCPDockerRepositories.
 
 ## Resources deployed
 Single docker repository that contains images for all applications.
