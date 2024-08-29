@@ -1,45 +1,36 @@
-variable "region" {
-  description = "The region where the GKE cluster will be deployed."
+
+variable "gcp_project" {
   type        = string
-  default     = "us-central1"
+  description = "GCP project the root module is deploying to."
 }
 
-variable "cluster_name" {
+variable "gcp_default_region" {
+  type        = string
+  description = "Default GCP region for root modules."
+}
+
+variable "gcp_default_zone" {
+  type        = string
+  description = "Default GCP zone for root modules."
+}
+
+variable "service_cluster_name" {
   description = "The name of the GKE cluster."
   type        = string
 }
 
-variable "credentials_file_path" {
-  description = "Path to the Google Cloud service account credentials JSON file."
-  type        = string
-}
-
-variable "service_account_id" {
-  description = "The ID of the service account to be created."
-  type        = string
-  default     = "service-account-id"
-}
-
-variable "service_account_display_name" {
-  description = "The display name of the service account."
-  type        = string
-  default     = "Service Account"
-}
-
-variable "initial_node_count" {
+variable "service_cluster_primary_initial_node_count" {
   description = "The initial number of nodes in the default node pool."
   type        = number
-  default     = 3
 }
 
-variable "preemptible_node_count" {
-  description = "The number of preemptible nodes in the managed node pool."
-  type        = number
-  default     = 1
-}
+# variable "preemptible_node_count" {
+#   description = "The number of preemptible nodes in the managed node pool."
+#   type        = number
+#   default     = 1
+# }
 
-variable "machine_type" {
+variable "service_cluster_primary_node_type" {
   description = "The machine type for the GKE nodes."
   type        = string
-  default     = "e2-medium"
 }
