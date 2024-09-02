@@ -7,7 +7,7 @@
 
 terraform {
   backend "gcs" {
-    bucket  = "databytes-project-echo-terraform-state"
-    prefix  = "terraform/state/example"
+    bucket = "databytes-project-echo-terraform-state"
+    prefix = "terraform/state/example"
   }
 }

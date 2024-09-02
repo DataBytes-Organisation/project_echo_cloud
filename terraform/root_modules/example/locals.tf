@@ -2,5 +2,5 @@
 # https://developer.hashicorp.com/terraform/language/values/locals
 
 locals {
-    vpc_network_name = "terraform-example-network-${var.env}"
+  vpc_network_name = "terraform-example-network-${var.env}"
 }
