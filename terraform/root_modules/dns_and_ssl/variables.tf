@@ -1,4 +1,3 @@
-
 variable "gcp_project" {
   type        = string
   description = "GCP project the root module is deploying to."
@@ -14,17 +13,17 @@ variable "gcp_default_zone" {
   description = "Default GCP zone for root modules."
 }
 
-variable "service_cluster_name" {
-  description = "The name of the GKE cluster."
+variable "env" {
   type        = string
+  description = "Infrastructure environment. Should be one of dev, sit or prod."
 }
 
-variable "service_cluster_primary_initial_node_count" {
-  description = "The initial number of nodes in the default node pool."
-  type        = number
+variable "public_domain_name" {
+  type        = string
+  description = "Domain name for the project."
 }
 
-variable "service_cluster_primary_node_type" {
-  description = "The machine type for the GKE nodes."
+variable "managed_zone_name" {
   type        = string
+  description = "Managed zone name for public_domain_name"
 }
