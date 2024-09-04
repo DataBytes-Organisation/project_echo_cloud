@@ -24,12 +24,6 @@ variable "service_cluster_primary_initial_node_count" {
   type        = number
 }
 
-# variable "preemptible_node_count" {
-#   description = "The number of preemptible nodes in the managed node pool."
-#   type        = number
-#   default     = 1
-# }
-
 variable "service_cluster_primary_node_type" {
   description = "The machine type for the GKE nodes."
   type        = string

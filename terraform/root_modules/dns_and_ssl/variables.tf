@@ -21,5 +21,4 @@ variable "env" {
 variable "project_top_level_domain_name" {
   type        = string
   description = "Top level domain name for the project. databytesprojectecho.com"
-  default     = "databytesprojectecho.com"
 }
