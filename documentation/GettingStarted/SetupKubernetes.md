@@ -3,6 +3,8 @@
 ## Overview
 This document outlines how to get started with using Kubernetes on the Project Echo service cluster.
 
+A new command line application is introduced; kubectl. kubectl is used to run commands and deployments on a kubernetes cluster.
+
 ## Assumptions
 * assumes Setup Terraform For GCP Deployments has been followed and configured. As gcloud cli being installed and authenticated is required.
 * assumes the user is using a shell or command prompt.
@@ -31,7 +33,7 @@ gcloud container clusters get-credentials project-echo-service-cluster --region=
 ```
 
 ### Confirm setup
-Use the following commands to verify that kubectl is authenticated and working with the service cluster.
+Use the following commands to verify that kubectl is installed, authenticated and working with the service cluster.
 
 ```
 kubectl cluster-info
