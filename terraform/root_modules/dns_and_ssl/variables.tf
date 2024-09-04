@@ -18,7 +18,12 @@ variable "env" {
   description = "Infrastructure environment. Should be one of dev, sit or prod."
 }
 
-variable "project_top_level_domain_name" {
+variable "public_domain_name" {
   type        = string
-  description = "Top level domain name for the project. databytesprojectecho.com"
+  description = "Domain name for the project."
+}
+
+variable "managed_zone_name" {
+  type        = string
+  description = "Managed zone name for public_domain_name"
 }

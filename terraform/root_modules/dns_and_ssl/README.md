@@ -1,11 +1,11 @@
 # dns_and_ssl
-This root module creates the hosted manage zone for dev-public.databytesprojectecho.com and a wildcard certificate which is intended to be used by the external facing load balancer for the service_cluster root module.
+This root module creates the hosted manage zone for databytesprojectecho.com and a wildcard certificate which is intended to be used by the external facing load balancer for the service_cluster root module.
 
 ## Resources deployed
-* DNS managed zone for dev-public.databytesprojectecho.com
-* Wildcard ssl cert for dev-public.databytesprojectecho.com
+* DNS managed zone for databytesprojectecho.com
+* Wildcard ssl cert for databytesprojectecho.com
 * Certificate map and entry for the wildcard cert.
-* DNS authorisation for dev-public.databytesprojectecho.com wildcard certificate
+* DNS authorisation for databytesprojectecho.com wildcard certificate
 
 ## Deployment steps
 
