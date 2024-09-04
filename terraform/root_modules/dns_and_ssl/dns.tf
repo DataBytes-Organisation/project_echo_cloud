@@ -1,7 +1,11 @@
 resource "google_dns_managed_zone" "public_dns_zone" {
-  name        = "public-dns-zone"
-  dns_name    = local.public_hosted_domain_name
+  name        = "${var.env}-public-databytesprojectecho-com"
+  dns_name    = "${local.public_hosted_domain_name}."
   description = "Public DNS zone for ${var.env} environment of ${var.project_top_level_domain_name}."
+  
+  dnssec_config {
+    state = "on"
+  }
 
   lifecycle {
     prevent_destroy = false
