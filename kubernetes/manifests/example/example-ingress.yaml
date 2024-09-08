@@ -1,15 +1,15 @@
 apiVersion: networking.gke.io/v1
 kind: ManagedCertificate
 metadata:
-  name: services-cert
+  name: example-cert
 spec:
   domains:
-    - services.databytesprojectecho.com # dev project specific
+    - example.databytesprojectecho.com # requires global ip and sub domain record set in dns_and_ssl root_module
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: fanout-ingress
+  name: example-ingress
   annotations:
     kubernetes.io/ingress.global-static-ip-name: external-services
     networking.gke.io/managed-certificates: services-cert
@@ -25,17 +25,4 @@ spec:
             name: web
             port:
               number: 8080
-      - path: /iotingest
-        pathType: ImplementationSpecific
-        backend:
-          service:
-            name: iot-ingestion
-            port:
-              number: 9001
-      # - path: /v2/*
-      #   pathType: ImplementationSpecific
-      #   backend:
-      #     service:
-      #       name: web2
-      #       port:
-      #         number: 8080
+
