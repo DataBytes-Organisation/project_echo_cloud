@@ -21,13 +21,3 @@ spec:
       name: iot-ingestion
       port:
         number: 9001
-  # rules:
-  # - http:
-  #     paths:
-  #     - path: /*
-  #       pathType: ImplementationSpecific
-  #       backend:
-  #         service:
-  #           name: iot-ingestion
-  #           port:
-  #             number: 9001
