@@ -1,0 +1,23 @@
+apiVersion: networking.gke.io/v1
+kind: ManagedCertificate
+metadata:
+  name: iot-cert
+spec:
+  domains:
+    - iot.databytesprojectecho.com # dev project specific
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: iot-ingress
+  annotations:
+    kubernetes.io/ingress.allow-http: "false"
+    kubernetes.io/ingress.global-static-ip-name: iot
+    networking.gke.io/managed-certificates: iot-cert
+    spec.ingressClassName: gce
+spec:
+  defaultBackend:
+    service:
+      name: iot-ingestion
+      port:
+        number: 9001
