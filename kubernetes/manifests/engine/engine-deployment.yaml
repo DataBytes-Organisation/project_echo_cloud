@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: echo-engine
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: echo-engine
+  template:
+    metadata:
+      labels:
+        app: echo-engine
+    spec:
+      containers:
+        - name: echo-engine
+          image: australia-southeast2-docker.pkg.dev/sit-23t1-project-echo-25288b9/project-echo/echo-engine:latest #adjust for docker image
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 9001 #adjust
+              protocol: TCP
+      
