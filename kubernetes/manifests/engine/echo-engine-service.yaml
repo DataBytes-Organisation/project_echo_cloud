@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: echo-engine
+  namespace: echo-system
+spec:
+  selector:
+    app: echo-engine
+  ports:
+    - name: http
+      port: 80
+      protocol: TCP
+      targetPort: http
+  type: ClusterIP
+  
