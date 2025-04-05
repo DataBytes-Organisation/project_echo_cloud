@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: echo-engine
+  namespace: echo-system
+  labels:
+    app: echo-engine
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: echo-engine
+  template:
+    metadata:
+      labels:
+        app: echo-engine
+    spec:
+      containers:
+        - name: echo-engine
+          image: australia-southeast2-docker.pkg.dev/sit-23t1-project-echo-25288b9/project-echo/echo-engine:v1.0.0
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+              name: http
+              protocol: TCP
+          resources:
+            requests:
+              cpu: "500m"
+              memory: "512Mi"
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: 8080
+          readinessProbe:
+            httpGet:
+              path: /readyz
+              port: 8080
